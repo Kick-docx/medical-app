@@ -1,0 +1,27 @@
+.site-header{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:70px;
+    z-index:9999;
+}
+
+.header-left,
+.header-right{
+    width:60px;
+}
+
+.header-title{
+    flex:1;
+    text-align:center;
+    margin:0;
+}
+
+.menu-button,
+.search-button {
+    font-size:26px;
+    border:none;
+    background:none;
+    cursor:pointer;
+}

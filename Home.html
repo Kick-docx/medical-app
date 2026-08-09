@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<div id="header"></div>
+<div id="menu"></div>
+<div id="search"></div>
+<main class="content">
+
+<h1>Hello</h1>
+    <p>This is the home page.</p>
+  
+<main class="content">
+<div class="home-menu">
+    <a href="内科総合.html" class="home-button">内科総合</a>
+    <a href="救急.html" class="home-button">救急</a>
+    <a href="消化器内科.html" class="home-button">消化器内科</a>
+    <a href="循環器内科.html" class="home-button">循環器内科</a>
+    <a href="腎臓内科.html" class="home-button">腎臓内科</a>
+    <a href="糖尿病.html" class="home-button">糖尿病内科</a>
+    <a href="血液内科.html" class="home-button">血液内科</a>
+</div>
+</main>
+
+<p>CCr（Cockcroft-Gault）</p>
+<label>年齢</label>
+<input type="number" id="age2">
+<label>体重 (kg)</label>
+<input type="number" id="weightCCr">
+<label>血清Cr (mg/dL)</label>
+<input type="number" id="cr2" step="0.01">
+<label>性別</label>
+<select id="sex2">
+    <option value="male">男性</option>
+    <option value="female">女性</option>
+</select>
+<button onclick="calcCCr()">計算</button>
+<p id="ccrResult"></p>
+<br>
+<p>持続点滴速度（γ計算）</p>
+<label>薬剤量 (mg)</label>
+<input type="number" id="drugMg">
+<label>総薬液量 (mL)</label>
+<input type="number" id="totalMl">
+<label>体重 (kg)</label>
+<input type="number" id="weightGamma">
+<label>目標γ (μg/kg/min)</label>
+<input type="number" id="gamma" step="0.01">
+<button onclick="calcGamma()">計算</button>
+<div id="gammaResult"></div>
+
+<script src="js/script.js"></script>
+
+<br>
+<p>間質性肺炎 採血
+KL-6, SP-D, ACE, リゾチーム, 抗核抗体, 抗DNA抗体, 抗Scl-70抗体, 抗Sm抗体, MPO-A, PR3-A, 抗ARS抗体, 
+抗RNP抗体, セントロメア抗体, 抗CCP抗体, Chlamydia pneumoniae IgA,G,M, 抗トリコスポロン抗体, 
+IgE, リウマトイド因子, IgG4, IgG,A,M, βDグルカン. 
+CHECK→HbA1c, B型肝炎, T-SPOT.</p>
+
+</main>
+<div id="footer"></div>
+<script src="js/loader.js"></script>
+</body>
+</html>
