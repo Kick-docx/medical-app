@@ -140,6 +140,7 @@ const urlsToCache = [
   'documents/bilchemo2.pdf'
   'documents/peptic-ulcer.pdf',
   'documents/MASLD.pdf'
+  'documents/hua.pdf'
 ];
 
 self.addEventListener("install", event => {
