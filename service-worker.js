@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.0.2';
+const CACHE_NAME = 'medical-v1.0.3';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -52,7 +52,9 @@ const urlsToCache = [
   '病棟医マニュアル.html',
   '褥瘡.html',
   '頭蓋内疾患.html',
-  '気管支喘息.html',
+  '喘息・COPD.html',
+  '認知症.html',
+  '消化器ガイドライン.html',
   'images/DM/ada.avif',
   'images/DM/egfr1.avif',
   'images/DM/egfr2.avif',
@@ -121,6 +123,22 @@ const urlsToCache = [
   'documents/DM/19.pdf',
   'documents/DM/20.pdf',
   'documents/DM/21.pdf',
+  'documents/DEM/01.pdf',
+  'documents/DEM/02.pdf',
+  'documents/DEM/03.pdf',
+  'documents/DEM/04.pdf',
+  'documents/DEM/05.pdf',
+  'documents/DEM/06.pdf',
+  'documents/DEM/07.pdf',
+  'documents/DEM/08.pdf',
+  'documents/DEM/09.pdf',
+  'documents/DEM/10.pdf',
+  'documents/DEM/11.pdf',
+  'documents/DEM/12.pdf',
+  'documents/DEM/13.pdf',
+  'documents/DEM/14.pdf',
+  'documents/DEM/15.pdf',
+  'documents/DEM/16.pdf',
   'documents/ACLS.pdf',
   'documents/benpi.pdf',
   'documents/DLP.pdf',
@@ -132,15 +150,32 @@ const urlsToCache = [
   'documents/sindenzu.pdf',
   'documents/stroke.pdf',
   'documents/suien.pdf',
-  'documents/ibd.pdf',
+  'documents/IBD.pdf',
   'documents/denkaisitu.pdf',
   'documents/panchemo.pdf',
   'documents/gemptx.pdf',
   'documents/bilchemo.pdf',
-  'documents/bilchemo2.pdf'
-  'documents/peptic-ulcer.pdf',
-  'documents/MASLD.pdf'
-  'documents/hua.pdf'
+  'documents/bilchemo2.pdf',
+  'documents/PU.pdf',
+  'documents/MASLD.pdf',
+  'documents/HUA.pdf',
+  'documents/AKI.pdf',
+  'documents/ARDS.pdf',
+  'documents/COPD.pdf',
+  'documents/COPDsum.pdf',
+  'documents/DMtx.pdf',
+  'documents/FD.pdf',
+  'documents/GERD.pdf',
+  'documents/IBS.pdf',
+  'documents/canache.pdf',
+  'documents/canachetx.pdf',
+  'documents/NS.pdf',
+  'documents/LC.pdf',
+  'documents/PU.pdf',
+  'documents/polyp.pdf',
+  'documents/gbstone.pdf',
+  'documents/headache.pdf',
+  'documents/CP.pdf',
 ];
 
 self.addEventListener("install", event => {
@@ -161,8 +196,27 @@ self.addEventListener("install", event => {
     );
 });
 
+self.addEventListener('activate', event => {
+    event.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames
+                    .filter(name => name !== CACHE_NAME)
+                    .map(name => caches.delete(name))
+            );
+        })
+    );
+
+    self.clients.claim();
+});
+
+
+
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then(response => response || fetch(event.request))
+    caches.match(event.request)
+        .then(response => {
+            return response || fetch(event.request);
+        })
   );
 });
