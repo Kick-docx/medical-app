@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.0.3';
+const CACHE_NAME = 'medical-v1.0.5';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -14,6 +14,7 @@ const urlsToCache = [
   'js/search.js',
   'js/dm tx.js',
   'js/mineral.js',
+  'js/gastro.ja',
   'pages.json',
   'manifest.json',
   'service-worker.js',
@@ -93,6 +94,7 @@ const urlsToCache = [
   'images/takotubo.JPG',
   'images/tintuuyaku.jpeg',
   'images/toutuuflochart.jpeg',
+  'images/iNPH.jpg',
   'documents/DLP/01.pdf',
   'documents/DLP/02.pdf',
   'documents/DLP/03.pdf',
