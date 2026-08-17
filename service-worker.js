@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.0.5';
+const CACHE_NAME = 'medical-v1.0.6';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -95,6 +95,9 @@ const urlsToCache = [
   'images/tintuuyaku.jpeg',
   'images/toutuuflochart.jpeg',
   'images/iNPH.jpg',
+  'images/stoope.png',
+  'images/chopolyp.jpg',
+  'images/block.jpg',
   'documents/DLP/01.pdf',
   'documents/DLP/02.pdf',
   'documents/DLP/03.pdf',
