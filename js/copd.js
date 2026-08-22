@@ -13,7 +13,6 @@ function showSlide() {
     document.getElementById("slideNumber").textContent =
         (currentSlide + 1) + " / " + images.length;
 }
-
 function nextSlide() {
     currentSlide++;
     if (currentSlide >= images.length) {
@@ -28,3 +27,23 @@ function prevSlide() {
     }
     showSlide();
 }
+/* スワイプ */
+let touchStartX = 0;
+let touchEndX = 0;
+const slideContainer =
+    document.getElementById("slideContainer");
+slideContainer.addEventListener("touchstart", function(event) {
+    touchStartX = event.changedTouches[0].screenX;
+});
+slideContainer.addEventListener("touchend", function(event) {
+    touchEndX = event.changedTouches[0].screenX;
+    const distance = touchEndX - touchStartX;
+    // 左へスワイプ
+    if (distance < -50) {
+        nextSlide();
+    }
+    // 右へスワイプ
+    if (distance > 50) {
+        prevSlide();
+    }
+});

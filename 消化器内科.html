@@ -20,20 +20,50 @@
 <main class="content">
 
 <h1><a href="内視鏡.html">内視鏡</a></h1>
-<h1><a href="化学療法.html">化学療法</a></h1>
+<h1><a href="胃癌.html">○胃癌</a></h1>
 <h1><a href="炎症性腸疾患.html">○IBD</a></h1>
 <h1><a href="肝硬変.html">○肝硬変</a></h1>
+<h1><a href="化学療法.html">化学療法総論</a></h1>
 <p><a href="病棟医マニュアル.html">病棟医マニュアル</a></p>
 
 <p>痔の治療は<a href="images/JI.JPG">強力ポステリザンorボラザG</a></p>
 <br>
 
+<div id="slideContainer" style="position: relative; text-align: center;">
+    <img id="slideImage" src="images/liver/01.jpg" style="width: 100%;">
+    <!-- 左ボタン -->
+    <button onclick="prevSlide()" style=
+        "position: absolute;
+        left: 10px; top: 50%; transform: translateY(-50%); 
+        background: rgba(0,0,0,0.45); 
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px 14px;
+        border-radius: 4px;">＜
+    </button>
+    <!-- 右ボタン -->
+    <button onclick="nextSlide()" style=
+        "position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.45);
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px 14px;
+        border-radius: 4px;">＞
+    </button>
+</div>
+<p id="slideNumber" style="text-align: center;">1 / 5</p>
 
 
 <h3><a href="消化器ガイドライン.html">消化器ガイドライン一覧</a></h3>
 
 </main>
 <div id="footer"></div>
+<script src="js/liver.js"></script>
 <script src="js/loader.js"></script>
 </body>
 </html>

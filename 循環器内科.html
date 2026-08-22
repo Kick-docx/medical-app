@@ -27,7 +27,7 @@
 <strong>HAERTスコア</strong>
 <br>HEARTスコアが0〜3点でトロポニンが2回陰性（3時間あけて2回目を測定）であれば，30日以内の主要心血管イベント（major adverse cardiac event;MACE）の可能性は1%．
 HEARTスコアが高ければ経過観察もしくは入院を．</p>
-<div>
+<br>
     <label for="heart-history">History（病歴）</label>
     <select id="heart-history">
         <option value="">選択してください</option>
@@ -35,9 +35,7 @@ HEARTスコアが高ければ経過観察もしくは入院を．</p>
         <option value="1">中等度疑い（1点）</option>
         <option value="2">強く疑う（2点）</option>
     </select>
-</div>
 <br>
-<div>
     <label for="heart-ecg">ECG</label>
     <select id="heart-ecg">
         <option value="">選択してください</option>
@@ -45,9 +43,7 @@ HEARTスコアが高ければ経過観察もしくは入院を．</p>
         <option value="1">非特異的再分極異常（1点）</option>
         <option value="2">有意なST偏位（2点）</option>
     </select>
-</div>
 <br>
-<div>
     <label for="heart-age">年齢</label>
     <input
         type="number"
@@ -55,11 +51,8 @@ HEARTスコアが高ければ経過観察もしくは入院を．</p>
         min="0"
         step="1"
         placeholder="例：65"
-    >
-    歳
-</div>
+    >歳
 <br>
-<div>
     <label for="heart-risk">Risk factors（心血管リスク因子）</label>
     <select id="heart-risk">
         <option value="">選択してください</option>
@@ -67,9 +60,7 @@ HEARTスコアが高ければ経過観察もしくは入院を．</p>
         <option value="1">1～2個（1点）</option>
         <option value="2">3個以上 または 既知の動脈硬化性疾患（2点）</option>
     </select>
-</div>
 <br>
-<div>
     <label for="heart-troponin">Troponin</label>
     <select id="heart-troponin">
         <option value="">選択してください</option>
@@ -77,7 +68,6 @@ HEARTスコアが高ければ経過観察もしくは入院を．</p>
         <option value="1">基準値の1～3倍（1点）</option>
         <option value="2">基準値の3倍超（2点）</option>
     </select>
-</div>
 <br>
 <button type="button" onclick="calculateHEART()">
     計算

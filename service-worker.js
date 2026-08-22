@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.0.7';
+const CACHE_NAME = 'medical-v1.0.8';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -7,6 +7,7 @@ const urlsToCache = [
   'css/footer.css',
   'css/header.css',
   'css/home.css',
+  'css/ibd.css',
   'js/loader.js',
   'js/service-worker.js',
   'js/menu.js',
@@ -17,6 +18,7 @@ const urlsToCache = [
   'js/gastro.js',
   'js/copd.js',
   'js/cardio.js',
+  'js/liver.js',
   'pages.json',
   'manifest.json',
   'service-worker.js',
@@ -106,6 +108,17 @@ const urlsToCache = [
   'images/COPD/04.jpg',
   'images/COPD/05.jpg',
   'images/COPD/06.jpg',
+  'images/liver/01.jpg',
+  'images/liver/02.jpg',
+  'images/liver/03.jpg',
+  'images/liver/04.jpg',
+  'images/liver/05.jpg',
+  'images/liver/06.jpg',
+  'images/MS.png',
+  'images/MVMS.png',
+  'images/CD1.png',
+  'images/CD2.png',
+  'images/CD3.png',
   'documents/DLP/01.pdf',
   'documents/DLP/02.pdf',
   'documents/DLP/03.pdf',
@@ -189,6 +202,8 @@ const urlsToCache = [
   'documents/gbstone.pdf',
   'documents/headache.pdf',
   'documents/CP.pdf',
+  'documents/benpi.pdf',
+  'documents/HF.pdf',
 ];
 
 self.addEventListener("install", event => {
@@ -219,7 +234,6 @@ self.addEventListener('activate', event => {
             );
         })
     );
-
     self.clients.claim();
 });
 

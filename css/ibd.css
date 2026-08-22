@@ -1,0 +1,11 @@
+.ibd {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.ibd_item {
+  width: calc((100% - 32px) / 3);
+  object-fit: cover;
+  display: block;
+}
