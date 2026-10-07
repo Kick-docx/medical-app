@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.0.9';
+const CACHE_NAME = 'medical-v1.0.0';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -59,7 +59,13 @@ const urlsToCache = [
   '頭蓋内疾患.html',
   '喘息・COPD.html',
   '認知症.html',
-  '消化器ガイドライン.html',
+  '消化管ガイドライン.html',
+  '胆膵.html',
+  '消化管.html',
+  '肝臓.html',
+  '胃癌.html',
+  '肝硬変.html',
+  '肝炎.html',
   'images/DM/ada.avif',
   'images/DM/egfr1.avif',
   'images/DM/egfr2.avif',
@@ -204,6 +210,10 @@ const urlsToCache = [
   'documents/CP.pdf',
   'documents/benpi.pdf',
   'documents/HF.pdf',
+  'documents/HCC.pdf',
+  'dicuments/Bhepa.pdf',
+  'documents/Chepa.pdf',
+  'documents/PC.pdf',
 ];
 
 self.addEventListener("install", event => {
