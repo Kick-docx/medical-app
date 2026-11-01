@@ -5,7 +5,6 @@
     margin-top: 30px;
 }
 
-
 .home-button {
     display: flex;
     justify-content: center;
@@ -21,6 +20,16 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+.home-button img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.home-button span {
+    text-align: left;
+}
 
 .home-button:hover {
     transform: translateY(-3px);
