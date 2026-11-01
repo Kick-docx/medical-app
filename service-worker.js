@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.0.0';
+const CACHE_NAME = 'medical-v1.1.1';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -8,6 +8,7 @@ const urlsToCache = [
   'css/header.css',
   'css/home.css',
   'css/ibd.css',
+  'cs/echo.css',
   'js/loader.js',
   'js/service-worker.js',
   'js/menu.js',
@@ -56,7 +57,7 @@ const urlsToCache = [
   '皮膚軟部組織感染症.html',
   '病棟医マニュアル.html',
   '褥瘡.html',
-  '頭蓋内疾患.html',
+  '頭部疾患.html',
   '喘息・COPD.html',
   '認知症.html',
   '消化管ガイドライン.html',
@@ -66,6 +67,8 @@ const urlsToCache = [
   '胃癌.html',
   '肝硬変.html',
   '肝炎.html',
+  '心エコー.html',
+  '心不全治療.html',
   'images/DM/ada.avif',
   'images/DM/egfr1.avif',
   'images/DM/egfr2.avif',
@@ -125,6 +128,16 @@ const urlsToCache = [
   'images/CD1.png',
   'images/CD2.png',
   'images/CD3.png',
+  'images/EAwave.jpg',
+  'images/EA.jpg',
+  'images/HF.jpg',
+  'images/JCSGCS.jpg',
+  'images/loop.jpg',
+  'images/HFfirst.jpg',
+  'images/DOAC.jpg',
+  'images/VTI.jpg',
+  'images/EAecho.jpg',
+  'images/ulcer.jpg',
   'documents/DLP/01.pdf',
   'documents/DLP/02.pdf',
   'documents/DLP/03.pdf',
@@ -214,6 +227,7 @@ const urlsToCache = [
   'dicuments/Bhepa.pdf',
   'documents/Chepa.pdf',
   'documents/PC.pdf',
+  'documents/PEVTE.pdf',
 ];
 
 self.addEventListener("install", event => {
