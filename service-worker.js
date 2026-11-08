@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.2.0.';
+const CACHE_NAME = 'medical-v1.3.0.';
 const urlsToCache = [
   './',
   'css/styles.css',
