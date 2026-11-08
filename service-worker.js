@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.1.2.';
+const CACHE_NAME = 'medical-v1.2.0.';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -146,6 +146,7 @@ const urlsToCache = [
   'images/icons/general.png',
   'images/icons/hematology.png',
   'images/icons/nephrology.png',
+  'images/inhaler.jpg',
   'documents/DLP/01.pdf',
   'documents/DLP/02.pdf',
   'documents/DLP/03.pdf',
@@ -236,6 +237,11 @@ const urlsToCache = [
   'documents/Chepa.pdf',
   'documents/PC.pdf',
   'documents/PEVTE.pdf',
+  'pdf-viewer.html',
+  'js/pdf-viewer.js',
+  'css/pdf-viewer.css',
+  'pdfjs/pdf.mjs',
+  'pdfjs/pdf.worker.mjs',
 ];
 
 self.addEventListener("install", event => {

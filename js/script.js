@@ -65,3 +65,39 @@ function calcGamma() {
         ${table}
     `;
 }
+
+
+function calculatePrescriptionDays() {
+  const discharge = document.getElementById("dischargeDate").value;
+  const outpatient = document.getElementById("outpatientDate").value;
+  const remaining = Number(document.getElementById("remainingDays").value);
+  const result = document.getElementById("prescriptionResult");
+  if (!discharge || !outpatient) {
+    result.textContent = "退院日と次回外来日を入力してください。";
+    return;
+  }
+  if (document.getElementById("remainingDays").value === "" ||
+      !Number.isInteger(remaining) || remaining < 0) {
+    result.textContent = "残薬は0以上の整数で入力してください。";
+    return;
+  }
+  const dischargeDate = new Date(discharge + "T00:00:00");
+  const outpatientDate = new Date(outpatient + "T00:00:00");
+  const diffDays = Math.round(
+    (Date.UTC(
+      outpatientDate.getFullYear(),
+      outpatientDate.getMonth(),
+      outpatientDate.getDate()
+    ) - Date.UTC(
+      dischargeDate.getFullYear(),
+      dischargeDate.getMonth(),
+      dischargeDate.getDate()
+    )) / (1000 * 60 * 60 * 24)
+  );
+  if (diffDays < 0) {
+    result.textContent = "次回外来日は退院日以降に設定してください。";
+    return;
+  }
+  const requiredDays = Math.max(0, diffDays - remaining);
+  result.textContent = "必要な処方日数：" + requiredDays + "日分";
+}

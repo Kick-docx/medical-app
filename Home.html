@@ -53,25 +53,26 @@
 <h2><a href="documents/picture.pdf">画像診断</a></h2>
 <br>
 
-<p>CCr（Cockcroft-Gault）</p>
-<label>年齢</label>
-<input type="number" id="age2"><br>
-<label>体重 (kg)</label>
-<input type="number" id="weightCCr"><br>
-<label>血清Cr (mg/dL)</label>
-<input type="number" id="cr2" step="0.01"><br>
-<label>性別</label>
-<select id="sex2">
+<calc>
+<p><strong>CCr（Cockcroft-Gault）</strong></p>
+<label>年齢</label><input type="number" id="age2"><br>
+<label>体重 (kg)</label><input type="number" id="weightCCr"><br>
+<label>血清Cr (mg/dL)</label><input type="number" id="cr2" step="0.01"><br>
+<label>性別</label><select id="sex2">
     <option value="male">男性</option>
     <option value="female">女性</option>
 </select>
-<button onclick="calcCCr()">計算</button><br>
+<button onclick="calcCCr()">Calc</button><br>
 <p id="ccrResult"></p>
+</calc>
+
 <br>
 <p>ニカルジピン10mg10mL：生食に混注して計50mL（5倍希釈）→5mL/h（1mg/h）．血圧に応じて5mL/hずつ調整．</p>
 <p>ノルアドレナリンは0.05γから開始．</p>
 <br>
-<p>持続点滴速度（γ計算）　1γ=体重kgx0.06mg/hr</p>
+
+<calc>
+<p><strong>持続点滴速度（γ計算）</strong>1γ=体重kgx0.06mg/hr</p>
 <label>薬剤量 (mg)</label>
 <input type="number" id="drugMg"><br>
 <label>総薬液量 (mL)</label>
@@ -80,8 +81,27 @@
 <input type="number" id="weightGamma"><br>
 <label>目標γ (μg/kg/min)</label>
 <input type="number" id="gamma" step="0.01">
-<button onclick="calcGamma()">計算</button><br>
+<button onclick="calcGamma()">Calc</button><br>
 <div id="gammaResult"></div>
+<br>
+</calc>
+
+<calc>
+<p><strong>処方日数計算</strong></p>
+    <label for="dischargeDate">退院日</label>
+    <input type="date" id="dischargeDate"><br>
+
+    <label for="outpatientDate">次回外来日</label>
+    <input type="date" id="outpatientDate"><br>
+
+    <label for="remainingDays">残薬（日分）</label>
+    <input type="number" id="remainingDays" min="0" step="1" value="0">
+  <button type="button" onclick="calculatePrescriptionDays()">Calc</button>
+  <p id="prescriptionResult" aria-live="polite">
+    必要な処方日数：－日分
+  </p>
+</calc>
+
 
 <script src="js/script.js"></script>
 

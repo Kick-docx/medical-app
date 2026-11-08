@@ -82,10 +82,10 @@ function calculateChildPugh() {
     document.getElementById("cp-total").textContent = total;
     document.getElementById("cp-class").textContent = childClass;
     document.getElementById("cp-detail").innerHTML =
-        `Bil ${bilirubinScore}点 ＋ ` +
-        `Alb ${albuminScore}点 ＋ ` +
-        `INR ${inrScore}点 ＋ ` +
-        `腹水 ${ascitesScore}点 ＋ ` +
+        `Bil ${bilirubinScore}点 ,  ` +
+        `Alb ${albuminScore}点 ,  ` +
+        `INR ${inrScore}点 ,  ` +
+        `腹水 ${ascitesScore}点 ,  ` +
         `脳症 ${encephalopathyScore}点`;
     result.style.display = "block";
 }

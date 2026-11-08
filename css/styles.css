@@ -14,3 +14,38 @@ main {
     margin: 0 auto;
     padding: 20px;
 }
+
+calc {
+    display: block;
+    margin-bottom: 20px;
+}
+calc p {
+    font-size: 24px;
+}
+calc label {
+    display: inline-block;
+    width: 220px;
+    font-size: 24px;
+    vertical-align: middle;
+}
+calc input {
+    width: 200px;
+    height: 40px;
+    font-size: 24px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+calc select {
+    width: 200px;
+    height: 45px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+calc button {
+    width: 120px;
+    height: 45px;
+    font-size: 24px;
+}
+calc div {
+    font-size: 24px;
+}

@@ -25,21 +25,22 @@
 <br>→インスリン分泌能低下に関わらず抗GAD抗体陰性なら抗IA-2,ZnT8抗体も検索</p>
 <p>T2DMならCPR Indexでインスリン分泌能を評価<br>※高血糖時は糖毒性あり有効でない．解除してから評価．</p>
 
-<p><strong>Cペプチドインデックス（CPI）</strong><br>正常値：1.6, 0.8-1.0でインスリン療法へ</p>
-<label>空腹時血糖（FPG, mg/dL）</label><br>
-<input type="number" id="fpg" step="0.1" placeholder="例：100"><br>
-<label>空腹時Cペプチド（CPR, ng/mL）</label><br>
-<input type="number" id="cpr" step="0.1" placeholder="例：2.0"><br><br>
-<button onclick="calcCPI()">計算</button>
-<p id="result"></p>
 
-<p><strong>HOMA-β計算</strong>　30%以下で分泌能低下</p>
-<label>空腹時血糖（FPG, mg/dL）</label><br>
-<input type="number" id="fpg" placeholder="例：100"><br>
-<label>空腹時インスリン（IRI, μU/mL）</label><br>
-<input type="number" id="iri" placeholder="例：8"><br><br>
-<button onclick="calcHOMABeta()">計算</button>
+<calc>
+<p><strong>Cペプチドインデックス（CPI）</strong><br>正常値：1.6, 0.8-1.0でインスリン療法へ</p>
+<label>空腹時血糖（mg/dL）</label><input type="number" id="fpg" step="0.1" placeholder="例：100"><br>
+<label>空腹時Cペプチド（ng/mL）</label><input type="number" id="cpr" step="0.1" placeholder="例：2.0">
+<button onclick="calcCPI()">Calc</button>
 <p id="result"></p>
+</calc>
+
+<calc>
+<p><strong>HOMA-β計算</strong>　30%以下で分泌能低下</p>
+<label>空腹時血糖（mg/dL）</label><input type="number" id="fpg" placeholder="例：100"><br>
+<label>空腹時インスリン（μU/mL）</label><input type="number" id="iri" placeholder="例：8">
+<button onclick="calcHOMABeta()">Calc</button>
+<p id="result"></p>
+</calc>
 
 <script src="js/dm tx.js"></script>
 
