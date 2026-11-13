@@ -14,6 +14,9 @@ function calcCCr(){
 const images = [
     "images/antibiotics/01.png",
     "images/antibiotics/02.png",
+    "images/antibiotics/03.png",
+    "images/antibiotics/04.png",
+    "images/antibiotics/05.png",
 ];
 let currentSlide = 0;
 function showSlide() {

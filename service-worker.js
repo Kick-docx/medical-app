@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.3.1.';
+const CACHE_NAME = 'medical-v1.3.2.';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -10,6 +10,7 @@ const urlsToCache = [
   'css/ibd.css',
   'css/echo.css',
   'css/general.css',
+  'css/common.css',
   'js/loader.js',
   'js/service-worker.js',
   'js/menu.js',
@@ -75,6 +76,7 @@ const urlsToCache = [
   '食道静脈瘤.html',
   '痙攣.html',
   '抗菌薬.html',
+  '肝細胞癌.html',
   'images/DM/ada.avif',
   'images/DM/egfr1.avif',
   'images/DM/egfr2.avif',

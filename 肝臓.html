@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -19,28 +20,11 @@
 <div id="search"></div>
 <main class="content">
 
-<h1><a href="肝炎.html">○肝炎</a></h1>
-  <h3>薬剤性肝障害 R値</h3>
-  <calc>
-    <label for="rALT">ALT実測値（U/L）</label>
-    <input type="number" id="rALT" min="0" step="any" placeholder="ALT値"><br>
-    <label for="rALTULN">ALT基準上限値（U/L）</label>
-    <input type="number" id="rALTULN" min="0" step="any" placeholder="ALT基準上限値"><br>
-    <label for="rALP">ALP実測値（U/L）</label>
-    <input type="number" id="rALP" min="0" step="any" placeholder="ALP値"><br>
-    <label for="rALPULN">ALP基準上限値（U/L）</label>
-    <input type="number" id="rALPULN" min="0" step="any" placeholder="ALP基準上限値">
-  <button type="button" onclick="calculateRValue()">calc</button>
-  <div id="rResult" aria-live="polite" style="margin-top:20px;">
-    <p>R値：－，肝障害パターン：－</p></div>
-  </calc>
-
-<h1><a href="肝硬変.html">○肝硬変</a></h1>
-<h1>○肝癌</h1>
-<p><a href="documents/HCC.pdf">肝癌ガイドライン</a></p>
-
-
-  <h3>FIB-4 index</h3>
+<div class="common-menu">
+    <a href="肝炎.html"><button class="line-minimal-btn" style="cursor: copy;">肝炎</button></a>
+    <a href="肝硬変.html"><button class="line-minimal-btn" style="cursor: copy;">肝硬変</button></a>
+    
+  <p><strong>FIB-4 index</strong></p>
   <calc>
     <label for="fibAge">年齢（歳）</label>
     <input type="number" id="fibAge" min="1" step="1" placeholder="年齢"><br>
@@ -54,6 +38,39 @@
   <div id="fibResult" aria-live="polite" style="margin-top:20px;">
     <p>FIB-4 index：－，肝線維化リスク：－</p></div>
   </calc>
+
+
+<<p><strong>NFS</strong>　MASLDの肝線維化リスク</p>
+<calc>
+  <label for="nfsAge">年齢（歳）</label>
+  <input type="number" id="nfsAge" min="1" step="1" placeholder="年齢"><br>
+  <label for="nfsBMI">BMI（kg/m²）</label>
+  <input type="number" id="nfsBMI" min="0" step="any" placeholder="BMI"><br>
+  <label for="nfsDM">糖尿病または空腹時血糖異常</label>
+  <select id="nfsDM">
+    <option value="">Select</option>
+    <option value="1">あり</option>
+    <option value="0">なし</option>
+  </select><br>
+  <label for="nfsAST">AST（U/L）</label>
+  <input type="number" id="nfsAST" min="0" step="any" placeholder="AST"><br>
+  <label for="nfsALT">ALT（U/L）</label>
+  <input type="number" id="nfsALT" min="0" step="any" placeholder="ALT"><br>
+  <label for="nfsPLT">血小板数（×10⁴/μL）</label>
+  <input type="number" id="nfsPLT" min="0" step="any" placeholder="血小板数"><br>
+  <label for="nfsAlb">アルブミン（g/dL）</label>
+  <input type="number" id="nfsAlb" min="0" step="any" placeholder="Alb">
+  <button type="button" onclick="calculateNFS()">calc</button>
+  <div id="nfsResult" aria-live="polite" style="margin-top:20px;">
+    <p>NFS：－，肝線維化リスク：－</p>
+  </div>
+</calc>
+
+
+    <a href="肝細胞癌.html"><button class="line-minimal-btn" style="cursor: copy;">肝細胞癌</button></a>
+</div>
+
+<p><a href="documents/HCC.pdf">肝癌ガイドライン</a></p>
 
 </main>
 <div id="footer"></div>

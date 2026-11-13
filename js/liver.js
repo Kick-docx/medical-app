@@ -96,3 +96,51 @@ function calculateFIB4() {
   result.innerHTML =
     "<p>FIB-4 index：" + fib4.toFixed(2) + "，肝線維化リスク：" + risk + "</p>";
 }
+
+
+function calculateNFS() {
+  const age = Number(document.getElementById("nfsAge").value);
+  const BMI = Number(document.getElementById("nfsBMI").value);
+  const DM = document.getElementById("nfsDM").value;
+  const AST = Number(document.getElementById("nfsAST").value);
+  const ALT = Number(document.getElementById("nfsALT").value);
+  const PLT = Number(document.getElementById("nfsPLT").value);
+  const Alb = Number(document.getElementById("nfsAlb").value);
+  const result = document.getElementById("nfsResult");
+  const inputs = [
+    "nfsAge", "nfsBMI", "nfsDM", "nfsAST",
+    "nfsALT", "nfsPLT", "nfsAlb"
+  ];
+  if (inputs.some(id => document.getElementById(id).value === "")) {
+    result.textContent = "すべて入力してください。";
+    return;
+  }
+  if (
+    ![age, BMI, AST, ALT, PLT, Alb].every(Number.isFinite) ||
+    age <= 0 || BMI <= 0 || AST <= 0 ||
+    ALT <= 0 || PLT <= 0 || Alb <= 0
+  ) {
+    result.textContent = "正しい数値を入力してください。";
+    return;
+  }
+  // 血小板数を×10^9/Lに換算
+  const platelet = PLT * 10;
+  const nfs =
+    -1.675 +
+    (0.037 * age) +
+    (0.094 * BMI) +
+    (1.13 * Number(DM)) +
+    (0.99 * (AST / ALT)) -
+    (0.013 * platelet) -
+    (0.66 * Alb);
+  let risk = "";
+  if (nfs < -1.455) {
+    risk = "低リスク";
+  } else if (nfs <= 0.676) {
+    risk = "中間リスク";
+  } else {
+    risk = "高リスク";
+  }
+  result.innerHTML =
+    "<p>NFS：" + nfs.toFixed(3) +"，肝線維化リスク：" + risk + "</p>";
+}

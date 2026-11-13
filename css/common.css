@@ -1,0 +1,48 @@
+.common-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.line-minimal-btn {
+background: transparent;
+border: none;
+border-bottom: 2px solid #2bcce2;
+color: #2bcce2;
+cursor: pointer;
+font-size: 24px;
+font-weight: 400;
+padding: 12px 0;
+transition: all 0.3s ease;
+position: relative;
+overflow: hidden;
+}
+
+.line-minimal-btn::before {
+content: '';
+position: absolute;
+bottom: 0;
+left: -100%;
+width: 100%;
+height: 2px;
+background: #2bcce3;
+transition: left 0.3s ease;
+}
+
+.line-minimal-btn:hover {
+border-bottom-color: #2bcce3;
+color: #2bcce3;
+transform: translateY(-1px);
+}
+
+.line-minimal-btn:hover::before {
+left: 0;
+}
+
+.contentA, .contentB {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}

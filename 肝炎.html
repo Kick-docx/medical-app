@@ -25,10 +25,26 @@
 　<p><a href="documents/Chepa.pdf">C型肝炎ガイドライン</a></p>
 <h2>✔️MASLD</h2>
 　<p><a href="documents/MASLD.pdf">MASLDガイドライン</a></p>
+<h2>✔️薬剤性肝障害</h2>
+  <h3>R値</h3>
+  <calc>
+    <label for="rALT">ALT実測値（U/L）</label>
+    <input type="number" id="rALT" min="0" step="any" placeholder="ALT値"><br>
+    <label for="rALTULN">ALT基準上限値（U/L）</label>
+    <input type="number" id="rALTULN" min="0" step="any" placeholder="ALT基準上限値"><br>
+    <label for="rALP">ALP実測値（U/L）</label>
+    <input type="number" id="rALP" min="0" step="any" placeholder="ALP値"><br>
+    <label for="rALPULN">ALP基準上限値（U/L）</label>
+    <input type="number" id="rALPULN" min="0" step="any" placeholder="ALP基準上限値">
+  <button type="button" onclick="calculateRValue()">calc</button>
+  <div id="rResult" aria-live="polite" style="margin-top:20px;">
+    <p>R値：－，肝障害パターン：－</p></div>
+  </calc>
 
 
 </main>
 <div id="footer"></div>
+<script src="js/liver.js"></script>
 <script src="js/loader.js"></script>
 </body>
 </html>
