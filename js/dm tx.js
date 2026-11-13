@@ -43,3 +43,23 @@ function calcCPI() {
     document.getElementById("result").textContent =
         "CPI = " + cpi.toFixed(2);
 }
+
+
+function calculateHOMAIR() {
+  const glucose = document.getElementById("homaGlucose").value;
+  const insulin = document.getElementById("homaInsulin").value;
+  const result = document.getElementById("homaIRResult");
+  if (glucose === "" || insulin === "") {
+    result.textContent = "すべて入力してください。";
+    return;
+  }
+  const G = Number(glucose);
+  const I = Number(insulin);
+  if (!Number.isFinite(G) || !Number.isFinite(I) || G <= 0 || I <= 0) {
+    result.textContent = "正しい数値を入力してください。";
+    return;
+  }
+  const homaIR = (G * I) / 405;
+  result.innerHTML =
+    "<p>HOMA-IR：" + homaIR.toFixed(2) + "</p>";
+}

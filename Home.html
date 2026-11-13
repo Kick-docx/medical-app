@@ -53,21 +53,7 @@
 <h2><a href="documents/picture.pdf">画像診断</a></h2>
 <br>
 
-<calc>
-<p><strong>CCr（Cockcroft-Gault）</strong></p>
-<label>年齢</label><input type="number" id="age2"><br>
-<label>体重 (kg)</label><input type="number" id="weightCCr"><br>
-<label>血清Cr (mg/dL)</label><input type="number" id="cr2" step="0.01"><br>
-<label>性別</label><select id="sex2">
-    <option value="male">男性</option>
-    <option value="female">女性</option>
-</select>
-<button onclick="calcCCr()">Calc</button><br>
-<p id="ccrResult"></p>
-</calc>
-
-<br>
-<p>ニカルジピン10mg10mL：生食に混注して計50mL（5倍希釈）→5mL/h（1mg/h）．血圧に応じて5mL/hずつ調整．</p>
+<p>ニカルジピン10mg10mL：生食に混注して計50mL（5倍希釈）→5mL/h（1mg/h）．血圧に応じて5mL/hずつ調整．Max25mL/h</p>
 <p>ノルアドレナリンは0.05γから開始．</p>
 <br>
 
@@ -87,7 +73,7 @@
 </calc>
 
 <calc>
-<p><strong>処方日数計算</strong></p>
+<p><strong>処方日数</strong></p>
     <label for="dischargeDate">退院日</label>
     <input type="date" id="dischargeDate"><br>
 

@@ -40,3 +40,15 @@ transform: translateY(-1px);
 .line-minimal-btn:hover::before {
 left: 0;
 }
+
+.content {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.contentA, .contentB {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}

@@ -22,6 +22,7 @@
 <h3>☆DVTの除外を必ず忘れない</h3>
 
 <h3>LRINEC Score</h3>
+<calc>
 <label>CRP (mg/L)</label>
 <input type="number" id="crp"><br>
 <label>白血球数 (×10³/μL)</label>
@@ -33,13 +34,14 @@
 <label>Cr (mg/dL)</label>
 <input type="number" id="cr" step="0.1"><br>
 <label>血糖 (mg/dL)</label>
-<input type="number" id="glu"><br>
-<button onclick="calcLRINEC()">計算</button>
+<input type="number" id="glu">
+<button onclick="calcLRINEC()">calc</button>
 <p id="lrinecResult"></p>
     <table>
     <tr><td>≦5</td><td>＜50%</td></tr>
     <tr><td>6-7</td><td>50-75%</td></tr>
     <tr><td>≧8</td><td>＞75%</td></tr></table>
+</calc>
 
 <img src="images/esiseikinmakuen.jpeg" width="100%">
 

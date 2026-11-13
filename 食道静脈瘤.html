@@ -1,0 +1,31 @@
+<body>
+<div id="slideContainer" style="position: relative; text-align: center;">
+    <img id="slideImage" src="images/varix/01.png" style="width: 100%;">
+    <!-- 左ボタン -->
+    <button onclick="prevSlide()" style=
+        "position: absolute;
+        left: 10px; top: 50%; transform: translateY(-50%); 
+        background: rgba(0,0,0,0.45); 
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px 14px;
+        border-radius: 4px;">＜
+    </button>
+    <!-- 右ボタン -->
+    <button onclick="nextSlide()" style=
+        "position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.45);
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px 14px;
+        border-radius: 4px;">＞
+    </button>
+</div>
+<p id="slideNumber">1 / 5</p>
+</body>
+<script src="js/varix.js"></script>

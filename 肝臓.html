@@ -20,12 +20,44 @@
 <main class="content">
 
 <h1><a href="肝炎.html">○肝炎</a></h1>
+  <h3>薬剤性肝障害 R値</h3>
+  <calc>
+    <label for="rALT">ALT実測値（U/L）</label>
+    <input type="number" id="rALT" min="0" step="any" placeholder="ALT値"><br>
+    <label for="rALTULN">ALT基準上限値（U/L）</label>
+    <input type="number" id="rALTULN" min="0" step="any" placeholder="ALT基準上限値"><br>
+    <label for="rALP">ALP実測値（U/L）</label>
+    <input type="number" id="rALP" min="0" step="any" placeholder="ALP値"><br>
+    <label for="rALPULN">ALP基準上限値（U/L）</label>
+    <input type="number" id="rALPULN" min="0" step="any" placeholder="ALP基準上限値">
+  <button type="button" onclick="calculateRValue()">calc</button>
+  <div id="rResult" aria-live="polite" style="margin-top:20px;">
+    <p>R値：－，肝障害パターン：－</p></div>
+  </calc>
+
 <h1><a href="肝硬変.html">○肝硬変</a></h1>
 <h1>○肝癌</h1>
 <p><a href="documents/HCC.pdf">肝癌ガイドライン</a></p>
 
+
+  <h3>FIB-4 index</h3>
+  <calc>
+    <label for="fibAge">年齢（歳）</label>
+    <input type="number" id="fibAge" min="1" step="1" placeholder="年齢"><br>
+    <label for="fibAST">AST（U/L）</label>
+    <input type="number" id="fibAST" min="0" step="any" placeholder="AST"><br>
+    <label for="fibALT">ALT（U/L）</label>
+    <input type="number" id="fibALT" min="0" step="any" placeholder="ALT"><br>
+    <label for="fibPLT">血小板数（×10⁴/μL）</label>
+    <input type="number" id="fibPLT" min="0" step="any" placeholder="血小板数">
+  <button type="button" onclick="calculateFIB4()">calc</button>
+  <div id="fibResult" aria-live="polite" style="margin-top:20px;">
+    <p>FIB-4 index：－，肝線維化リスク：－</p></div>
+  </calc>
+
 </main>
 <div id="footer"></div>
 <script src="js/loader.js"></script>
+<script src="js/liver.js"></script>
 </body>
 </html>

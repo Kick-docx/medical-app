@@ -24,7 +24,7 @@ calc p {
 }
 calc label {
     display: inline-block;
-    width: 220px;
+    width: 260px;
     font-size: 24px;
     vertical-align: middle;
 }

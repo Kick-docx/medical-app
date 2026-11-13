@@ -4,19 +4,6 @@ if ('serviceWorker' in navigator) {
     .catch(err => console.log('登録失敗:', err));
 }
 
-function calcCCr(){
-    const age = parseFloat(document.getElementById("age2").value);
-    const weight = parseFloat(document.getElementById("weightCCr").value);
-    const cr = parseFloat(document.getElementById("cr2").value);
-    const sex = document.getElementById("sex2").value;
-    let ccr = ((140-age)*weight)/(72*cr);
-    if(sex==="female"){
-        ccr *= 0.85;
-    }
-    document.getElementById("ccrResult").textContent =
-        "CCr = " + ccr.toFixed(1) + " mL/min";
-}
-
 function calcGamma() {
     const drugMg = parseFloat(document.getElementById("drugMg").value);
     const totalMl = parseFloat(document.getElementById("totalMl").value);

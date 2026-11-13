@@ -26,21 +26,35 @@
 <p>T2DMならCPR Indexでインスリン分泌能を評価<br>※高血糖時は糖毒性あり有効でない．解除してから評価．</p>
 
 
-<calc>
+
 <p><strong>Cペプチドインデックス（CPI）</strong><br>正常値：1.6, 0.8-1.0でインスリン療法へ</p>
+<calc>
 <label>空腹時血糖（mg/dL）</label><input type="number" id="fpg" step="0.1" placeholder="例：100"><br>
 <label>空腹時Cペプチド（ng/mL）</label><input type="number" id="cpr" step="0.1" placeholder="例：2.0">
 <button onclick="calcCPI()">Calc</button>
 <p id="result"></p>
 </calc>
 
+<p><strong>HOMA-β</strong>　30%以下で分泌能低下</p>
 <calc>
-<p><strong>HOMA-β計算</strong>　30%以下で分泌能低下</p>
 <label>空腹時血糖（mg/dL）</label><input type="number" id="fpg" placeholder="例：100"><br>
 <label>空腹時インスリン（μU/mL）</label><input type="number" id="iri" placeholder="例：8">
 <button onclick="calcHOMABeta()">Calc</button>
 <p id="result"></p>
 </calc>
+
+<p><strong>HOMA-IR</strong>　1.6以下で正常，2.5以上でインスリン抵抗性あり</p>
+<calc>
+  <label for="homaGlucose">空腹時血糖値（mg/dL）</label>
+  <input type="number" id="homaGlucose" min="0" step="any" placeholder="血糖値"><br>
+  <label for="homaInsulin">空腹時インスリン値（μU/mL）</label>
+  <input type="number" id="homaInsulin" min="0" step="any" placeholder="インスリン値">
+  <button type="button" onclick="calculateHOMAIR()">calc</button>
+  <div id="homaIRResult" aria-live="polite" style="margin-top:20px;">
+    <p>HOMA-IR：－</p>
+  </div>
+</calc>
+
 
 <script src="js/dm tx.js"></script>
 
