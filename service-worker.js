@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.3.3.';
+const CACHE_NAME = 'medical-v1.3.4.';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -101,8 +101,9 @@ const urlsToCache = [
   'images/EsoK.jpeg',
   'images/GBS.PNG',
   'images/highkarium.JPG',
-  'images/icon-192.png',
-  'images/icon-512.png',
+  'images/icons/icon-192.png',
+  'images/icons/icon-512.png',
+  'images/icons/apple-touch-icon.png',
   'images/JI.JPG',
   'images/jyokusou.JPG',
   'images/jyokusoutiryou.JPG',
