@@ -10,6 +10,7 @@
 .search-box.show {
     display: flex;
     gap: 10px;
+    background-color: #f5f5f5;
 }
 
 .search-box input {
@@ -23,4 +24,7 @@
 
 .search-box button {
     padding: 10px 20px;
+    color: #f5f5f5;
+    background-color: #2bcce3;
+    border: 1px solid #2bcce3;
 }
