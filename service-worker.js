@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.3.2.';
+const CACHE_NAME = 'medical-v1.3.3.';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -114,7 +114,7 @@ const urlsToCache = [
   'images/StoPolyp.jpeg',
   'images/takotubo.JPG',
   'images/tintuuyaku.jpeg',
-  'images/toutuuflochart.jpeg',
+  'images/opioidflowchart.png',
   'images/iNPH.jpg',
   'images/stoope.png',
   'images/chopolyp.jpg',
@@ -154,6 +154,7 @@ const urlsToCache = [
   'images/icons/general.png',
   'images/icons/hematology.png',
   'images/icons/nephrology.png',
+  'images/icons/loupe.png',
   'images/inhaler.jpg',
   'images/varix/01.png',
   'images/varix/02.png',
